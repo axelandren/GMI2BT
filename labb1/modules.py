@@ -11,8 +11,10 @@ def check_divisible(first, second):
 def guess_randint():
     from random import randint
     target = randint(1, 101)
+    amount_of_guesses = 0
     hit_the_target = False
     while hit_the_target == False:
+        amount_of_guesses = amount_of_guesses + 1
         while True:
             try:
                 guess = int(input('Guess the number: '))
@@ -21,6 +23,7 @@ def guess_randint():
                 print('Numbers only please...')
         if guess == target:
             print(f'\nCongratulations! Number {guess} was the right answer!')
+            print(f'It took you {amount_of_guesses} to get it right!')
             input('\nPress Enter to continue...')
             hit_the_target = True
         elif guess < target:

@@ -1,7 +1,7 @@
 def get_number():
     while True:
         try:
-            number = int(input('Type in your number: '))
+            number = int(input('Enter your number: '))
             break
         except ValueError:
             print('Numbers only please...')
