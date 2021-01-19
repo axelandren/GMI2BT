@@ -24,7 +24,7 @@ def guess_randint():
         amount_of_guesses = amount_of_guesses + 1
         if guess == target:
             print(f'\nCongratulations! Number {guess} was the right answer!')
-            print(f'It took you {amount_of_guesses} to get it right!')
+            print(f'It took you {amount_of_guesses} tries to get it right.')
             input('\nPress Enter to continue...')
             hit_the_target = True
         elif guess < target:
