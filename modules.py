@@ -1,12 +1,12 @@
-def check_divisible(first, second):
-    numbers_list = []
+def check_divisibility(first, second):
+    numbers = []
     i = 1
     while i <= 1000:
         if i % int(first) == 0 and i % int(second) == 0:
-            numbers_list.append(i)
-        i = i + 1
-    print(f'Result: {numbers_list}')
-    print(f'Average value is: {sum(numbers_list) / len(numbers_list)}')
+            numbers.append(i)
+        i += 1
+    print(f'Result: {numbers}')
+    print(f'Average value is: {sum(numbers) / len(numbers)}')
     input('\nPress Enter to continue...')
 
 def guess_randint():
@@ -21,10 +21,9 @@ def guess_randint():
                 break
             except ValueError:
                 print('Numbers only please...')
-        amount_of_guesses = amount_of_guesses + 1
+        amount_of_guesses += 1
         if guess == target:
-            print(f'\nCongratulations! Number {guess} was the right answer!')
-            print(f'It took you {amount_of_guesses} tries to get it right.')
+            print(f'\nCongratulations! {guess} was the right answer!\nIt took you {amount_of_guesses} tries to get it right.')
             input('\nPress Enter to continue...')
             hit_the_target = True
         elif guess < target:
